@@ -1,5 +1,4 @@
 //META{"name":"AlpalisRichPresence", "authorId": "173856853116059649", "website":"https://www.alpalis.eu", "source": "https://raw.githubusercontent.com/Pandetthe/AlpalisRichPresence/master/AlpalisRichPresence.plugin.js"}*//
-//KURWA MAĆ
 let RPClient;
 
 (() => {
@@ -3625,7 +3624,7 @@ class AlpalisRichPresence {
     return "Automatycznie ustawia Rich Presence po jego uruchomieniu. Plugin na ten moment tylko dla administracji serwerowni Alpalis!";
   }
   getVersion() {
-    return "1.2";
+    return "1.3";
   }
   getAuthor() {
     return "Pandetthe";
@@ -3641,17 +3640,16 @@ class AlpalisRichPresence {
       BdApi.showToast('AlpalisRichPresence: Proszę zainstaluj "ZeresPluginLibrary" i zrestartuj plugin.', {type: "error"});
     } else {
 	  this.initialize();
-	  BdApi.showToast('AlpalisRichPresence: Znaleziono "ZeresPluginLibrary".', {type: "info"});
     }
   }
   initialize() {
     if (window.ZeresPluginLibrary.PluginUpdater && typeof window.ZeresPluginLibrary.PluginUpdater.checkForUpdate === "function") {
       try {
-		window.ZeresPluginLibrary.PluginUpdater.checkForUpdate(this.getName(), this.getVersion(), `https://raw.githubusercontent.com/Pandetthe/AlpalisRichPresence/master/AlpalisRichPresence.plugin.js`);
 		BdApi.showToast('AlpalisRichPresence: Aktualizacja pobrana pomyślnie.', {type: "info"});
+		window.ZeresPluginLibrary.PluginUpdater.checkForUpdate(this.getName(), this.getVersion(), `https://raw.githubusercontent.com/Pandetthe/AlpalisRichPresence/master/AlpalisRichPresence.plugin.js`);
       } catch (e) {
-		console.error(e);
 		BdApi.showToast(`AlpalisRichPresence: Nieudało się pobrać aktualizacji. ${e}`, {type: "error"});
+		console.error(e);
       }
 	}
 	else {
