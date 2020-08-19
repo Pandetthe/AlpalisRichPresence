@@ -1,4 +1,5 @@
-//META{"name":"AlpalisRichPresence", "authorId": "173856853116059649", "website":"https://www.alpalis.eu"}*//
+//META{"name":"AlpalisRichPresence", "authorId": "173856853116059649", "website":"https://www.alpalis.eu", "source": "https://raw.githubusercontent.com/Pandetthe/AlpalisRichPresence/master/AlpalisRichPresence.plugin.js"}*//
+
 let RPClient;
 
 (() => {
@@ -3624,7 +3625,7 @@ class AlpalisRichPresence {
     return "Automatycznie ustawia Rich Presence po jego uruchomieniu. Plugin na ten moment tylko dla administracji serwerowni Alpalis!";
   }
   getVersion() {
-    return "1.3";
+    return "1.2";
   }
   getAuthor() {
     return "Pandetthe";
