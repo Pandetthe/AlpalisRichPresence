@@ -1,4 +1,4 @@
-//META{"name":"AlpalisRichPresence","website":"https://www.alpalis.eu", "source": "https://raw.githubusercontent.com/Pandetthe/AlpalisRichPresence/master/AlpalisRichPresence.plugin.js", "authorlink": "http://www.discord.alpalis.eu"}*//
+//META{"name":"AlpalisRichPresence", "authorId": "173856853116059649", "website":"https://www.alpalis.eu", "source": "https://raw.githubusercontent.com/Pandetthe/AlpalisRichPresence/master/AlpalisRichPresence.plugin.js"}*//
 //KURWA MAĆ
 let RPClient;
 
@@ -3625,7 +3625,7 @@ class AlpalisRichPresence {
     return "Automatycznie ustawia Rich Presence po jego uruchomieniu. Plugin na ten moment tylko dla administracji serwerowni Alpalis!";
   }
   getVersion() {
-    return "1.1";
+    return "1.2";
   }
   getAuthor() {
     return "Pandetthe";
@@ -3646,7 +3646,7 @@ class AlpalisRichPresence {
   initialize() {
     if (window.ZeresPluginLibrary.PluginUtilities && typeof window.ZeresPluginLibrary.PluginUtilities.checkForUpdate === "function") {
       try {
-        window.ZeresPluginLibrary.PluginUtilities.checkForUpdate(this.getName(), this.getVersion(), `https://raw.githubusercontent.com/Mega-Mewthree/BetterDiscordPlugins/master/Plugins/${this.getName()}/${this.getName()}.plugin.js`);
+        window.ZeresPluginLibrary.PluginUtilities.checkForUpdate(this.getName(), this.getVersion(), `https://raw.githubusercontent.com/Pandetthe/AlpalisRichPresence/master/AlpalisRichPresence.plugin.js`);
       } catch (e) {
         console.error(e);
       }
