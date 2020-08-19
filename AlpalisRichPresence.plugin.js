@@ -3640,17 +3640,24 @@ class AlpalisRichPresence {
     if (typeof window.ZeresPluginLibrary === "undefined") {
       BdApi.showToast('AlpalisRichPresence: Proszę zainstaluj "ZeresPluginLibrary" i zrestartuj plugin.', {type: "error"});
     } else {
-      this.initialize();
+	  this.initialize();
+	  BdApi.showToast('AlpalisRichPresence: Znaleziono "ZeresPluginLibrary".', {type: "info"});
     }
   }
   initialize() {
-    if (window.ZeresPluginLibrary.PluginUtilities && typeof window.ZeresPluginLibrary.PluginUtilities.checkForUpdate === "function") {
+	
+    if (window.ZeresPluginLibrary.PluginUpdater && typeof window.ZeresPluginLibrary.PluginUpdater.checkForUpdate === "function") {
       try {
-        window.ZeresPluginLibrary.PluginUtilities.checkForUpdate(this.getName(), this.getVersion(), `https://raw.githubusercontent.com/Pandetthe/AlpalisRichPresence/master/AlpalisRichPresence.plugin.js`);
+		window.ZeresPluginLibrary.PluginUpdater.checkForUpdate(this.getName(), this.getVersion(), `https://raw.githubusercontent.com/Pandetthe/AlpalisRichPresence/master/AlpalisRichPresence.plugin.js`);
+		BdApi.showToast('AlpalisRichPresence: Aktualizacja pobrana pomyślnie.', {type: "info"});
       } catch (e) {
-        console.error(e);
+		console.error(e);
+		BdApi.showToast(`AlpalisRichPresence: Nieudało się pobrać aktualizacji. ${e}`, {type: "error"});
       }
-    }
+	}
+	else {
+		BdApi.showToast(`AlpalisRichPresence: Wystąpił błąd podczas sprawdzania aktualizacji. ${e}`, {type: "error"});
+	}
     BdApi.showToast("AlpalisRichPresence has started!");
     this.settings = BdApi.loadData("AlpalisRichPresence", "settings") || {};
 	this.currentClientID = "745300441327206500"; //PRZY ROZPOWSZECHNIENIU CLIENT ID RICH PRESENCE, SPODZIEWAJ SIĘ REPRYMENDY ZE STRONY NASZEJ JAK I ZESPOŁU DISCORDA, GDYŻ JEST TO NIELEGALNE
