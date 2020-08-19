@@ -3622,10 +3622,10 @@ class AlpalisRichPresence {
     return "AlpalisRichPresence";
   }
   getDescription() {
-    return "Automatycznie ustawia Rich Presence po jego uruchomieniu. Plugin tylko dla administracji serwerowni Alpalis!";
+    return "Automatycznie ustawia Rich Presence po jego uruchomieniu. Plugin na ten moment tylko dla administracji serwerowni Alpalis!";
   }
   getVersion() {
-    return "1.0";
+    return "1.1";
   }
   getAuthor() {
     return "Pandetthe";
