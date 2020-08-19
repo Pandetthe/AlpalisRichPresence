@@ -1,5 +1,5 @@
-//META{"name":"AlpalisRichPresence","website":"https://www.alpalis.eu"}*//
-
+//META{"name":"AlpalisRichPresence","website":"https://www.alpalis.eu", "source": "https://raw.githubusercontent.com/Pandetthe/AlpalisRichPresence/master/AlpalisRichPresence.plugin.js"}*//
+//KURWA MAĆ
 let RPClient;
 
 (() => {
