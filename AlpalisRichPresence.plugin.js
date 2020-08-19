@@ -3625,7 +3625,7 @@ class AlpalisRichPresence {
     return "Automatycznie ustawia Rich Presence po jego uruchomieniu. Plugin na ten moment tylko dla administracji serwerowni Alpalis!";
   }
   getVersion() {
-    return "1.3";
+    return "1.2";
   }
   getAuthor() {
     return "Pandetthe";
@@ -3645,7 +3645,6 @@ class AlpalisRichPresence {
     }
   }
   initialize() {
-	
     if (window.ZeresPluginLibrary.PluginUpdater && typeof window.ZeresPluginLibrary.PluginUpdater.checkForUpdate === "function") {
       try {
 		window.ZeresPluginLibrary.PluginUpdater.checkForUpdate(this.getName(), this.getVersion(), `https://raw.githubusercontent.com/Pandetthe/AlpalisRichPresence/master/AlpalisRichPresence.plugin.js`);
