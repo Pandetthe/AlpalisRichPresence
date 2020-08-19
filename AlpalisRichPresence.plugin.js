@@ -1,4 +1,4 @@
-//META{"name":"AlpalisRichPresence", "authorId": "173856853116059649", "website":"https://www.alpalis.eu", "source": "https://raw.githubusercontent.com/Pandetthe/AlpalisRichPresence/master/AlpalisRichPresence.plugin.js"}*//
+//META{"name":"AlpalisRichPresence", "authorId": "173856853116059649", "website":"https://www.alpalis.eu"}*//
 let RPClient;
 
 (() => {
